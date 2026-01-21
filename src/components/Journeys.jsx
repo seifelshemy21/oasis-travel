@@ -28,7 +28,7 @@ export default function Journeys() {
         },
     ]
     return (
-        <section className="relative min-h-screen snap-start flex flex-col items-center justify-center p-6 md:p-12 border-b-2 border-oasis-gold overflow-hidden bg-black">
+        <section className="relative min-h-screen snap-start flex flex-col items-center justify-center py-20 px-6 md:p-12 border-b-2 border-oasis-gold bg-black">
 
             {/* Background Texture (optional, lowered opacity) */}
             <img
@@ -49,7 +49,7 @@ export default function Journeys() {
             </div>
 
             {/* Bento Grid */}
-            <div className="relative z-10 w-full max-w-7xl grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[300px]">
+            <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-6 gap-3 md:gap-6 auto-rows-[200px] md:auto-rows-[300px]">
                 {journeys.map((journey, index) => {
                     // Logic for 3-up then 2-up layout
                     // First 3 items: col-span-2 (2+2+2 = 6)
@@ -60,12 +60,12 @@ export default function Journeys() {
                     return (
                         <div
                             key={index}
-                            className={`${colSpan} relative group rounded-2xl overflow-hidden shadow-2xl border-2 border-oasis-gold hover:border-oasis-gold/50 transition-colors duration-500`}
+                            className={`${colSpan} relative group rounded-2xl overflow-hidden shadow-2xl border-2 border-oasis-gold hover:border-oasis-gold/50 transition-colors duration-500 `}
                         >
                             <img
                                 src={journey.image}
                                 alt={journey.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="w-full h-full object-center transition-transform duration-700 group-hover:scale-110"
                             />
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 opacity-90 transition-opacity duration-300" />
