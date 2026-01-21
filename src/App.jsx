@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+    <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar">
       <Header />
       <GoldenStandard />
       <Journeys />
