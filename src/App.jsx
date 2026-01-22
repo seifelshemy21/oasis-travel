@@ -2,6 +2,8 @@ import './App.css'
 import Header from './components/Header'
 import GoldenStandard from './components/GoldenStandard'
 import Journeys from './components/Journeys'
+import Description from './components/Description'
+import Extraordinary from './components/Extraordinary'
 function App() {
 
 
@@ -10,6 +12,8 @@ function App() {
       <Header />
       <GoldenStandard />
       <Journeys />
+      <Description />
+      <Extraordinary />
     </main>
   )
 }

@@ -3,13 +3,13 @@ import background1 from '../assets/oasis-background1.jpg'
 import logo from '../assets/logo-oasis.png'
 function Header() {
     return (
-        <section className="relative h-screen snap-start flex flex-col md:flex-row items-center justify-center md:justify-start px-6 py-20 md:px-12 md:py-0 overflow-hidden border-b-2 border-oasis-gold">
+        <section className="relative h-screen  flex flex-col md:flex-row items-center justify-center md:justify-start px-6 py-20 md:px-12 md:py-0 overflow-hidden border-b-2 border-oasis-gold">
 
             {/* Background Image */}
             <img
                 src={background1}
                 alt="Desert landscape background"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="absolute inset-0 w-full h-full object-center"
                 loading="eager"
             />
 

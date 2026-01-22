@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'oasis-gold': '#F7931EA8',
+        'oasis-gold': '#F7931E80',
       },
       fontFamily: {
         serif: ['Times New Roman', 'serif'], // Ensuring a classic serif fallback or specific font if desired

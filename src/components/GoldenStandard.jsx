@@ -2,12 +2,12 @@ import background2 from '../assets/oasis-background2.jpg'
 import boat from '../assets/Frame65.png'
 export default function GoldenStandard() {
     return (
-        <section className="relative h-screen snap-start grid grid-cols-1 md:grid-cols-2 gap-10 px-6 py-20 md:px-12 md:py-0 items-center border-b-2 border-oasis-gold overflow-hidden">
+        <section className="relative h-screen grid grid-cols-1 md:grid-cols-2 gap-10 px-6 py-20 md:px-12 md:py-0 items-center border-b-2 border-oasis-gold overflow-hidden">
             {/* Background Image */}
             <img
                 src={background2}
                 alt="Sandy background texture"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="absolute inset-0 w-full h-full object-center object-center"
                 loading="lazy"
             />
 
@@ -32,7 +32,7 @@ export default function GoldenStandard() {
                 <img
                     src={boat}
                     alt="Luxury boat on water"
-                    className="w-full h-auto max-w-[350px] md:max-w-md h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                    className="w-full h-auto max-w-[350px] md:max-w-md object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                 />
             </div>
         </section>
