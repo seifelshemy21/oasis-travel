@@ -1,5 +1,5 @@
 import React from 'react'
-import background1 from '../assets/oasis-background1.jpg'
+import background1 from '../assets/oasis-background11.jpg'
 import logo from '../assets/logo-oasis.png'
 function Header() {
     return (
@@ -14,7 +14,7 @@ function Header() {
             />
 
             {/* Dark Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/40" />
 
             {/* Content Container */}
             <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center">
@@ -24,7 +24,7 @@ function Header() {
                     <img
                         src={logo}
                         alt="Oasis Logo"
-                        className="w-64 h-64 md:w-[400px] md:h-[400px] object-cover rounded-2xl shadow-2xl"
+                        className="w-64 h-64 md:w-[400px] md:h-[400px] object-cover rounded-2xl "
                     />
                 </div>
 

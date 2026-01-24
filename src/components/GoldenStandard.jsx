@@ -13,8 +13,7 @@ export default function GoldenStandard() {
                 loading="lazy"
             />
 
-            {/* Dark Overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/20" />
+
 
             {/* Left Content */}
             <div className="relative z-10 flex flex-col justify-center text-center md:text-left order-2 md:order-1">
