@@ -9,7 +9,7 @@ function Header() {
             <img
                 src={background1}
                 alt="Desert landscape background"
-                className="absolute inset-0 w-full h-full object-center"
+                className="absolute inset-0 w-full h-full object-center object-cover"
                 loading="eager"
             />
 

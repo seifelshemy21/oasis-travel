@@ -1,5 +1,7 @@
 import background2 from '../assets/oasis-background2.jpg'
 import boat from '../assets/Frame65.png'
+import { FaArrowRightLong } from "react-icons/fa6";
+
 export default function GoldenStandard() {
     return (
         <section className="relative h-screen grid grid-cols-1 md:grid-cols-2 gap-10 px-6 py-20 md:px-12 md:py-0 items-center border-b-2 border-oasis-gold overflow-hidden">
@@ -22,8 +24,8 @@ export default function GoldenStandard() {
                 <p className="text-white/80 text-lg md:text-xl max-w-md mx-auto md:mx-0 leading-relaxed">
                     Immerse yourself in a world where time stands still, and the horizon is your only boundary. Experience the luxury of silence.
                 </p>
-                <button className="mt-8 mx-auto md:mx-0 w-fit px-8 py-3 border-2 border-oasis-gold text-oasis-gold rounded-full hover:bg-oasis-gold hover:text-white transition-all duration-300 uppercase tracking-widest text-sm">
-                    Explore the journey →
+                <button className="mt-8 flex items-center gap-2 mx-auto md:mx-0 w-fit px-8 py-3 border-2 border-oasis-gold text-oasis-gold rounded-full hover:bg-oasis-gold hover:text-white transition-all duration-300 uppercase tracking-widest text-sm">
+                    Explore the journey <FaArrowRightLong className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </button>
             </div>
 

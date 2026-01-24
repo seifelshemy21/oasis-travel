@@ -1,5 +1,6 @@
 import React from 'react'
 import bgImg from '../assets/extraordinary.jpg'
+import { FaArrowRightLong } from "react-icons/fa6";
 
 function Extraordinary() {
     return (
@@ -42,15 +43,7 @@ function Extraordinary() {
                             </span>
                             <button className="group flex items-center justify-center gap-2 bg-[#C68A40] hover:bg-[#b07836] text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-[#C68A40]/20">
                                 Submit
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
+                                <FaArrowRightLong className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                             </button>
                         </div>
                     </div>

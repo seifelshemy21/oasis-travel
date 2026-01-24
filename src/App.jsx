@@ -1,20 +1,31 @@
-import './App.css'
-import Header from './components/Header'
-import GoldenStandard from './components/GoldenStandard'
-import Journeys from './components/Journeys'
-import Description from './components/Description'
-import Extraordinary from './components/Extraordinary'
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import './App.css';
+// Lazy load pages
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+
+
+
+// Loading component
+const Loading = () => (
+  <div className="h-screen w-full flex items-center justify-center bg-black text-oasis-gold font-serif text-xl">
+    Loading Oasis...
+  </div>
+);
+
 function App() {
-
-
   return (
-    <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar">
-      <Header />
-      <GoldenStandard />
-      <Journeys />
-      <Description />
-      <Extraordinary />
-    </main>
+    <Router>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </Router>
   )
 }
 

@@ -60,7 +60,7 @@ export default function Journeys() {
                     return (
                         <div
                             key={index}
-                            className={`${colSpan} relative group rounded-2xl overflow-hidden shadow-2xl border-2 border-oasis-gold hover:border-oasis-gold/50 transition-colors duration-500 `}
+                            className={`${colSpan} relative group rounded-2xl overflow-hidden shadow-2xl border-2 border-oasis-gold hover:border-oasis-gold/50 hover:scale-105 transition-colors duration-500 `}
                         >
                             <img
                                 src={journey.image}
