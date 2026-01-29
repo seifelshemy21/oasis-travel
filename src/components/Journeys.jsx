@@ -1,4 +1,5 @@
 import background3 from '../assets/oasis-background3.jpg'
+import { Link } from 'react-router-dom';
 import sharm from '../assets/sharm elshikh/sharm32.jpeg'
 import hurghada from '../assets/Hurgada/hurgada3.jpeg'
 import aswan from '../assets/aswan/aswan17.jpeg'
@@ -9,22 +10,27 @@ export default function Journeys() {
         {
             title: "Sharm Elsheikh",
             image: sharm,
+            slug: 'sharm-elsheikh'
         },
         {
             title: "Hurghada",
             image: hurghada,
+            slug: 'hurghada'
         },
         {
             title: "Nile in Aswan",
             image: aswan,
+            slug: 'aswan'
         },
         {
             title: "Taba",
             image: taba,
+            slug: 'taba'
         },
         {
             title: "Sunrise in Luxor",
             image: luxor,
+            slug: 'luxor'
         },
     ]
     return (
@@ -58,9 +64,10 @@ export default function Journeys() {
                     const colSpan = isTopRow ? 'md:col-span-2' : 'md:col-span-2';
 
                     return (
-                        <div
+                        <Link
+                            to={`/journey/${journey.slug}`}
                             key={index}
-                            className={`${colSpan} relative group rounded-2xl overflow-hidden shadow-2xl border-2 border-oasis-gold hover:border-oasis-gold/50 hover:scale-105 transition-colors duration-500 `}
+                            className={`${colSpan} relative group rounded-2xl overflow-hidden shadow-2xl border-2 border-oasis-gold hover:border-oasis-gold/50 hover:scale-105 transition-colors duration-500 block`}
                         >
                             <img
                                 src={journey.image}
@@ -81,7 +88,7 @@ export default function Journeys() {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     )
                 })}
             </div>

@@ -6,6 +6,7 @@ import './App.css';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
+const PlaceGallery = lazy(() => import('./pages/PlaceGallery'));
 
 // Loading component
 const Loading = () => (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route element={<MainLayout />}>
               <Route path="/" element={<Home />} />
+              <Route path="/journey/:id" element={<PlaceGallery />} />
             </Route>
           </Routes>
         </Suspense>

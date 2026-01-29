@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
 
     // Listen to scroll-container only
     useEffect(() => {
         const container = document.getElementById("scroll-container");
-        if (!container) return;
+        if (!container) return; // Maybe on a subpage
 
         const handleScroll = () => {
             setScrolled(container.scrollTop > 50);
@@ -19,7 +22,7 @@ const Navbar = () => {
 
         container.addEventListener("scroll", handleScroll);
         return () => container.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [location.pathname]); // Re-run when path changes
 
     // Lock scroll when mobile menu is open
     useEffect(() => {
@@ -38,14 +41,29 @@ const Navbar = () => {
     const handleNavClick = (id) => {
         setIsOpen(false);
 
-        const container = document.getElementById("scroll-container");
-        const element = document.getElementById(id);
+        if (location.pathname !== "/") {
+            navigate("/");
+            // Wait for navigation and mount
+            setTimeout(() => {
+                const container = document.getElementById("scroll-container");
+                const element = document.getElementById(id);
+                if (container && element) {
+                    container.scrollTo({
+                        top: element.offsetTop,
+                        behavior: "smooth",
+                    });
+                }
+            }, 100);
+        } else {
+            const container = document.getElementById("scroll-container");
+            const element = document.getElementById(id);
 
-        if (container && element) {
-            container.scrollTo({
-                top: element.offsetTop,
-                behavior: "smooth",
-            });
+            if (container && element) {
+                container.scrollTo({
+                    top: element.offsetTop,
+                    behavior: "smooth",
+                });
+            }
         }
     };
 

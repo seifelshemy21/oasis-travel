@@ -8,7 +8,7 @@
     body {
         height: 100%;
         margin: 0;
-        overflow: hidden;
-        /* App container handles scrolling */
+        /* overflow: hidden; Removed to allow scrolling on other pages */
+        /* App container handles scrolling for Home, but generic pages need body scroll */
     }
 }
