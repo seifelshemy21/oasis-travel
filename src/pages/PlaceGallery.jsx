@@ -68,12 +68,12 @@ const PlaceGallery = () => {
             </header>
 
             {/* Gallery Grid */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px] ">
                 {images.map((imgSrc, index) => (
                     <div
                         key={index}
                         className={`
-              relative overflow-hidden rounded-lg group border border-stone-800
+              relative overflow-hidden rounded-lg group border-2 border-stone-800 hover:border-oasis-gold transition-colors duration-300 shadow-md shadow-oasis-gold/50 hover:shadow-lg hover:shadow-oasis-gold/50
               ${index % 3 === 0 ? 'md:col-span-2' : ''} 
               ${index % 5 === 0 ? 'row-span-2 h-full' : ''}
             `}
